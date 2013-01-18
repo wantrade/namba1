@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1,minimum-scale=1, maximum-scale=1">
+    <script type="text/javascript" src="./kakao.link.js"></script>
+<script type="text/javascript">
+function executeURLLink()
+{
+    kakao.link("talk").send({
+        msg : "를 소개합니다 메세지를 전달해보세요.;",
+        url : "http://web.aceqr.co.kr",
+        appid : "web.aceqr.co.kr",
+        appver : "2.0",
+        appname : "모바일웹페이지",
+        type : "link"
+    });
+
+}
+
+
+function executeKakaoStoryLink()
+{
+    kakao.link("story").send({   
+        post : "http://web.aceqr.co.kr",
+        appid : "web.aceqr.co.kr",
+        appver : "1.0",
+        appname : "모바일웹페이지",
+        urlinfo : JSON.stringify({title:"모바일 웹페이지 고민 이렇게 쉽게 해결되다니~.", imageurl:["http://m1.daumcdn.net/photo-media/201209/27/ohmynews/R_430x0_20120927141307222.jpg"], type:"article"})
+    });
+}
+
+</script>
+<style>
+body {
+    background-color: #F7F7F0;
+    text-align: center;
+}
+div {
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FFFB1F), to(#EBE70C));
+    border-radius: 10px;
+    width:320px;
+    height:40px;
+    box-shadow: rgba(0, 0, 0, 0.496094) 0px 1px 1px 0px, rgba(0, 0, 0, 0.0976563) 0px -1px 0px 0px;
+    border:0px;
+    font-size:1.25em;
+    text-align: center;
+    line-height: 40px;
+    margin:0px auto;
+}
+img { 
+    border-radius: 5px;
+    margin:0px auto;
+}
+</style>
+</head>
+
+    <img src="./kakaostory.png"/>
+    <br/><br/>
+    <div onclick="javascript:executeKakaoStoryLink()">카카오스토리 링크</div>
+    <br/>
+    
+</body>
+
+</html>
